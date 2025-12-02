@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPA Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div>
+          <h1>GPA Calculator</h1>
+          <p class="subtitle">Elegant 4.0-scale GPA calculator for your courses</p>
+        </div>
+      </header>
+
+      <main class="app-main">
+        <section class="card">
+          <div class="card-header">
+            <h2>Courses</h2>
+            <p class="card-caption">
+              Add your courses, grades, and credit hours. Supports letter grades or percentages.
+            </p>
+          </div>
+
+          <div class="table-wrapper">
+            <div class="table-header">
+              <div>Course</div>
+              <div>Grade Type</div>
+              <div>Grade</div>
+              <div>Credits</div>
+              <div></div>
+            </div>
+            <div id="courses-body" class="table-body">
+              <!-- Rows inserted by JS -->
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button id="add-course" class="btn ghost">Add another course</button>
+            <div class="actions-right">
+              <button id="reset" class="btn subtle">Reset</button>
+              <button id="calculate" class="btn primary">Calculate GPA</button>
+            </div>
+          </div>
+
+          <div id="errors" class="error-list" aria-live="polite"></div>
+
+          <div id="result" class="result" aria-live="polite" hidden>
+            <p class="result-label">Your GPA</p>
+            <p class="result-value">
+              <span id="gpa-value">0.00</span>
+              <span class="result-scale">/ 4.00</span>
+            </p>
+            <p id="result-note" class="result-note"></p>
+          </div>
+        </section>
+
+        <section class="card secondary">
+          <div class="card-header">
+            <h2>Export</h2>
+            <p class="card-caption">
+              Save your current table as a CSV file for your records.
+            </p>
+          </div>
+          <div class="card-actions single">
+            <button id="export" class="btn outline">Download as CSV</button>
+          </div>
+        </section>
+
+        <section class="card secondary info">
+          <div class="card-header">
+            <h2>Scale used</h2>
+          </div>
+          <div class="scale-grid">
+            <div class="scale-item">
+              <span class="scale-grade">A / A+</span>
+              <span class="scale-points">4.0</span>
+            </div>
+            <div class="scale-item">
+              <span class="scale-grade">A-</span>
+              <span class="scale-points">3.7</span>
+            </div>
+            <div class="scale-item">
+              <span class="scale-grade">B+</span>
+              <span class="scale-points">3.3</span>
+            </div>
+            <div class="scale-item">
+              <span class="scale-grade">B</span>
+              <span class="scale-points">3.0</span>
+            </div>
+            <div class="scale-item">
+              <span class="scale-grade">B-</span>
+              <span class="scale-points">2.7</span>
+            </div>
+            <div class="scale-item">
+              <span class="scale-grade">C+</span>
+              <span class="scale-points">2.3</span>
+            </div>
+            <div class="scale-item">
+              <span class="scale-grade">C</span>
+              <span class="scale-points">2.0</span>
+            </div>
+            <div class="scale-item">
+              <span class="scale-grade">C-</span>
+              <span class="scale-points">1.7</span>
+            </div>
+            <div class="scale-item">
+              <span class="scale-grade">D+</span>
+              <span class="scale-points">1.3</span>
+            </div>
+            <div class="scale-item">
+              <span class="scale-grade">D</span>
+              <span class="scale-points">1.0</span>
+            </div>
+            <div class="scale-item">
+              <span class="scale-grade">F</span>
+              <span class="scale-points">0.0</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p>Built for a clean, distraction-free GPA check.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
