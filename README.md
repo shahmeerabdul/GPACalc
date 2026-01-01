@@ -109,22 +109,5 @@ python -m http.server 8000
    - Note: `Based on 15.0 total credit hours using a 4.0 scale.`
 5. (Optional) Click **Download as CSV** to save your current course table.
 
----
-
-### Demo / screenshot (description)
-
-Imagine a **dark, glassy card** centered on the page, with:
-
-- A soft gradient background and a heading: **“GPA Calculator”**.
-- A tidy table of courses with rounded inputs and smooth focus outlines.
-- Primary action buttons in a subtle indigo gradient.
-- A compact result pill at the bottom that glows slightly and fades in with your GPA.
-
-You can easily take a screenshot by:
-
-- Filling in some sample courses.
-- Pressing **Calculate GPA**.
-- Using your OS’s screenshot tool (e.g. **Win + Shift + S** on Windows) to capture the page.
-
 
 
